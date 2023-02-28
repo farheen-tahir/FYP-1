@@ -17,6 +17,7 @@ export default function App() {
         <Route path="/signin" element={<SignUp />} />
         <Route path="/donation" element={<Donation />} />
         {/* adding new route */}
+        {/* test1 */}
       </Routes>
     </div>
   );
