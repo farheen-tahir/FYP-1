@@ -16,6 +16,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/signin" element={<SignUp />} />
         <Route path="/donation" element={<Donation />} />
+        {/* adding new route */}
       </Routes>
     </div>
   );
