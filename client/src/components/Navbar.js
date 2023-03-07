@@ -27,18 +27,20 @@ function Navbar() {
         <ul className={state ? "nav-menu active" : "nav-menu"}>
           {MenuItems.map((item, index) => {
             return (
+              <div className={item.class}>
               <li key={index}>
                 <Link to={item.url} className={item.cName}>
                   <i className={item.icon} aria-hidden="true"></i>
                   {item.title}
                 </Link>
               </li>
+              </div>
             );
           })}
-          <Link to="/signin">
-            <Button  >Sign Up</Button>
+          {/* <Link to="/signin"> */}
+            {/* <Button  >Sign Up</Button> */}
             {/* <Button variant="primary" onClick={handleShow}> Sign In </Button> */}
-          </Link>
+          {/* </Link> */}
         </ul>
       </nav></div>
         {/* <div>

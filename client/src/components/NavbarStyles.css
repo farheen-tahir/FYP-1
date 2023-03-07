@@ -14,6 +14,14 @@
   z-index: 9999;
   background-color: #fff;
 }
+.button-light{
+  /* border: 1px dotted black; */
+  padding: 10px 20px;
+  background-color: #1B66CA;
+  color: white;
+  margin-top: -8px;
+  border-radius: 10px;
+}
 .navbar-logo {
   color: #222;
   font-size: 2rem;
@@ -29,6 +37,13 @@
 .nav-links {
   text-decoration: none;
   color: #222;
+  font-size: 1.2rem;
+  font-weight: 600;
+  /* padding: 5px 10px; */
+  white-space: nowrap;
+}.nav-link-button {
+  text-decoration: none;
+  color: white;
   font-size: 1.2rem;
   font-weight: 600;
   /* padding: 5px 10px; */

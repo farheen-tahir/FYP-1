@@ -18,14 +18,24 @@ export const MenuItems = [
     icon: "fas fa-donate"
   },
   {
+    title: "News",
+    url: "/news",
+    cName: "nav-links",
+    icon: "fa-solid fa-address-book"
+  },  {
     title: "Contact",
     url: "/contact",
     cName: "nav-links",
     icon: "fa-solid fa-address-book"
   },
   {
-    title: "Sign Up",
+    title: " Signup",
     url: "/signup",
-    cName: "nav-links-mobile"
+    cName: "nav-link-button",
+    icon: "fa-solid fa-user-plus",
+    class: "button-light"
   }
+
+
+
 ];
