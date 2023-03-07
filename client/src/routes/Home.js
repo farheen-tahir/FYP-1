@@ -15,6 +15,7 @@ function Home() {
         btnClass="show"
         url="/"
         btnText="Donate"
+        // 
       />
       <Mission />
       <Tragedy />
