@@ -8,7 +8,7 @@ function Home() {
     <>
       <Navbar />
       <Hero
-      
+      // 
         cName="hero"
         heroImg={require("../assets/banner.png")}
         title="Help The Poor For Their Better Future"
