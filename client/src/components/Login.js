@@ -3,9 +3,12 @@ import { useState } from "react";
 import { Form, Link } from "react-router-dom";
 import { FormItems } from "./FormItems";
 import axios from "axios";
+import { useNavigate  } from 'react-router-dom';
 
 function Login() {
   
+    const navigate = useNavigate();
+
     const [user,setUser]=useState({
         
         email:"",
@@ -20,7 +23,16 @@ function Login() {
         });
       } 
       const login= ()=> {
-        axios.post("http://localhost:5000/signin",user).then(res => {alert(res.data.message)});
+        axios.post("http://localhost:5000/signin",user)
+        .then(res => 
+          {
+            if(res.status==200){
+              console.log("successfully got 200 response ", res.status)
+              navigate('/dashboard')
+            }
+            alert(res.data.message)
+          }
+          );
       } 
       const registerCall=()=>{
         <Form />

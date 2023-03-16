@@ -6,6 +6,7 @@ import SignUp from "./routes/SignUp";
 import Donation from "./routes/Donation";
 import Login from "./components/Login";
 import News from "./components/News";
+import Dashboard from './components/components/Dashboard'
 import { Route, Routes } from "react-router-dom";
 
 
@@ -19,7 +20,7 @@ export default function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/donation" element={<Donation />} />
         <Route path="/news" element={<News />} />
-        <Route path="/dashboard" element={<News />} />
+        <Route strict path="/dashboard" element={<Dashboard />} />
         
       </Routes>
     </div>
