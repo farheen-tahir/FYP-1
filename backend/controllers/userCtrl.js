@@ -75,6 +75,7 @@ const userCtrl={
                 maxAge:7*24*60*60*1000//7 days
             })
             res.json({msg:"Login Successful"});
+            res.status(200);
 
         }catch(err) {
             return res.status(500).json({msg:err.message});

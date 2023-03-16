@@ -4,6 +4,7 @@ const mongoose=require("mongoose");
 const cors=require("cors");
 const fileUpload=require("express-fileupload");
 const cookieParser=require("cookie-parser");
+const { response } = require("express");
 
 
 const app=express();
@@ -15,12 +16,22 @@ app.use(fileUpload({
 }));
 
 //ROUTES
+
 app.use("/user",require("./routes/userRouter"));
 app.use("/subscriber",require("./routes/subscriberRouter"));
 app.use("/api",require("./routes/upload"));
+app.use("/",(req, res)=>{res.send("Home route")});  //just for testing
 
 //DB CONNECTIVITY
-mongoose.connect(process.env.MONGODB_URL);
+// mongoose.set("strictQuery", false);
+// mongoose.connect(process.env.MONGODB_URL);
+
+mongoose.set("strictQuery", false);
+mongoose.connect(process.env.MONGODB_URL, () => {
+  console.log("Connected to MongoDB");
+});
+
+
 // ,{
 //     useCreateIndex:true,
 //     useFindAndModify:false,
