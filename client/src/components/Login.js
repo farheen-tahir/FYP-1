@@ -20,7 +20,7 @@ function Login() {
         });
       } 
       const login= ()=> {
-        axios.post("http://localhost:5000/signin",user).then(res => alert(res.data.message));
+        axios.post("http://localhost:5000/signin",user).then(res => {alert(res.data.message)});
       } 
       const registerCall=()=>{
         <Form />
